@@ -19,13 +19,15 @@ class Player
 
         int serverPort = 2407;
         String ipServer = "127.0.0.1";
+        // String ipServer = "3.87.32.191";
+        
         String userInput;
+        client.connect(ipServer, serverPort);
 
         System.out.print("User: ");
         scanner = new Scanner(System.in);
         userInput = scanner.nextLine();
 
-        client.connect(ipServer, serverPort);
 
         System.out.println(client.readMess());
 
